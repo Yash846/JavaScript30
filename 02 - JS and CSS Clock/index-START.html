@@ -79,9 +79,9 @@
         let min = now.getMinutes();
         let hr = now.getHours();
         console.log(hr, min, sec);
-        let secondsAngle = (360 / 60) * sec;
-        let minAngle = (360 / 60) * min;
-        let hrAngle = (minAngle / 30) * hr;
+        let secondsAngle = (sec / 60) * 360;
+        let minAngle = (min / 60) * 360;
+        let hrAngle = (hr / 12) * 360;
         secondsHand.style.transform = `rotate(${secondsAngle}deg)`;
         minuteHand.style.transform = `rotate(${minAngle}deg)`;
         hrHand.style.transform = `rotate(${hrAngle}deg)`;
